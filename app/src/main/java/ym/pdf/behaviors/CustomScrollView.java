@@ -63,7 +63,12 @@ public class CustomScrollView extends NestedScrollView {
             pdfView = findViewById(R.id.pdfview);
         }
         if (appBarLayout != null) {
-            minCollapseHeight = appBarLayout.getHeight() - appBarLayout.getTotalScrollRange();
+            int marginTop = 0;
+            if (getLayoutParams() != null && getLayoutParams() instanceof ViewGroup.MarginLayoutParams) {
+                ViewGroup.MarginLayoutParams layoutParams = (MarginLayoutParams) getLayoutParams();
+                marginTop = layoutParams.topMargin;
+            }
+            minCollapseHeight = appBarLayout.getHeight() - appBarLayout.getTotalScrollRange() + marginTop;
         }
     }
 
