@@ -1,5 +1,7 @@
 <resources>
-    <string name="app_name">PDF</string>
+    <string name="app_name_release">PDF release</string>
+    <string name="app_name_debug">PDF debug</string>
+    <string name="app_name">PDF test</string>
     <string name="action_settings">Settings</string>
 
     <string name="top_view_behavior">ym.pdf.behaviors.TopViewBehavior</string>
